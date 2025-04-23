@@ -63,7 +63,7 @@ const MoodAnalytics = () => {
           <p className="font-medium">
             {format(parseISO(label), "MMM d, yyyy")}
           </p>
-          <p className="text-orange-600">Average Mood: {payload[0].value}</p>
+          <p className="text-orange-600">Average Productivity: {payload[0].value}</p>
           <p className="text-blue-600">Entries: {payload[1].value}</p>
         </div>
       );
@@ -118,7 +118,7 @@ const MoodAnalytics = () => {
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm font-medium">
-                  Average Mood
+                  Average Productivity
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -126,7 +126,7 @@ const MoodAnalytics = () => {
                   {stats.averageScore}/10
                 </div>
                 <p className="text-xs text-muted-foreground">
-                  Overall mood score
+                  Overall Productivity score
                 </p>
               </CardContent>
             </Card>
@@ -134,7 +134,7 @@ const MoodAnalytics = () => {
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm font-medium">
-                  Mood Summary
+                  Productivity Summary
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -146,10 +146,10 @@ const MoodAnalytics = () => {
             </Card>
           </div>
 
-          {/* Mood Timeline Chart */}
+          {/* Productivity Timeline Chart */}
           <Card>
             <CardHeader>
-              <CardTitle>Mood Timeline</CardTitle>
+              <CardTitle>Productivity Timeline</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="h-[300px] w-full">
@@ -181,7 +181,7 @@ const MoodAnalytics = () => {
                       type="monotone"
                       dataKey="averageScore"
                       stroke="#f97316"
-                      name="Average Mood"
+                      name="Average Productivity"
                       strokeWidth={2}
                     />
                     <Line

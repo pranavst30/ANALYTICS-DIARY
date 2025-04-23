@@ -229,7 +229,7 @@ export default function JournalEntryPage() {
             render={({ field }) => (
               <Select onValueChange={field.onChange} value={field.value}>
                 <SelectTrigger className={errors.mood ? "border-red-500" : ""}>
-                  <SelectValue placeholder="Select a mood..." />
+                  <SelectValue placeholder="Rate your productivity" />
                 </SelectTrigger>
                 <SelectContent>
                   {Object.values(MOODS).map((mood) => (

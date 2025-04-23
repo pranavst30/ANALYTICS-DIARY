@@ -78,8 +78,8 @@ export function JournalFilters({ entries }) {
         </div>
 
         <Select value={selectedMood} onValueChange={setSelectedMood}>
-          <SelectTrigger className="w-[150px]">
-            <SelectValue placeholder="Filter by mood" />
+          <SelectTrigger className="w-[220px]">
+            <SelectValue placeholder="Filter by Productivity" />
           </SelectTrigger>
           <SelectContent>
             {Object.values(MOODS).map((mood) => (
