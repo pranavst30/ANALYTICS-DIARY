@@ -44,11 +44,12 @@ export async function getAnalytics(period = "30d") {
   // Process entries for analytics
   const moodData = entries.reduce((acc, entry) => {
     const date = entry.createdAt.toISOString().split("T")[0];
-    if (!acc[date]) {
+     if (!acc[date]) {
+      // Initialize the date entry if it doesn't exist
       acc[date] = {
-        totalScore: 0,
-        count: 0,
-        entries: [],
+        totalScore: 0,  // Initialize total mood score for the day
+        count: 0,       // Initialize the count of entries for the day
+        entries: [],    // Array to store the entries for the specific day
       };
     }
     acc[date].totalScore += entry.moodScore;
